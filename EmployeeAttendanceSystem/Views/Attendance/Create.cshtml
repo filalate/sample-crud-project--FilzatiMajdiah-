@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model EmployeeAttendanceSystem.Models.Attendance
+
+<h2>Add Attendance</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.Label("Employee")
+        @Html.DropDownListFor(m => m.EmployeeId, (IEnumerable<SelectListItem>)ViewBag.Employees, "Select Employee", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.AttendanceDate)
+        @Html.TextBoxFor(m => m.AttendanceDate, new { @class = "form-control", type = "date" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Status)
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LeaveCategory)
+        @Html.DropDownListFor(m => m.LeaveCategory, new SelectList(new[] { "Annual Leave", "Emergency Leave" }), "Select Category", new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+}

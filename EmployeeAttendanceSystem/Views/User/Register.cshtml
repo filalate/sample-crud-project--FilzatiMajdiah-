@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNoNavbar.cshtml";
+}
+@model EmployeeAttendanceSystem.Models.User
+
+<div class="auth-container">
+    <!-- Back button -->
+    <a href="@Url.Action("Welcome", "User")" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+
+    <h2>Register</h2>
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Username)
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+    }
+</div>
+
+<!-- JavaScript Popup -->
+@if (TempData["Message"] != null)
+{
+    <script>
+        alert('@TempData["Message"]');
+        @if (TempData["MessageType"]?.ToString() == "success")
+        {
+            @Html.Raw("window.location.href = '" + Url.Action("Login", "User") + "';")
+            ;
+        }
+    </script>
+
+}

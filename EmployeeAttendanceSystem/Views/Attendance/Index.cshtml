@@ -1,0 +1,39 @@
+﻿@model IEnumerable<EmployeeAttendanceSystem.Models.AttendanceViewModel>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Manage Attendance</h2>
+    <a href="@Url.Action("Create", "Attendance")" class="btn btn-create">Add Attendance</a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Attendance ID</th>
+            <th>Employee Name</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Leave Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var attendance in Model)
+        {
+            <tr>
+                <td>@attendance.AttendanceId</td>
+                <td>@attendance.EmployeeName</td>
+                <td>@attendance.AttendanceDate.ToShortDateString()</td>
+                <td>@attendance.Status</td>
+                <td>@attendance.LeaveCategory</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Attendance", new { id = attendance.AttendanceId })" class="btn btn-warning">
+                        <i class="fas fa-pencil-alt"></i> Edit
+                    </a>
+                    <a href="@Url.Action("Delete", "Attendance", new { id = attendance.AttendanceId })" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

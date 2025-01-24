@@ -1,0 +1,459 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .table th, .table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .table th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom Navbar Styling */
+.custom-navbar {
+    background-color: #374151;
+    padding: 10px 20px; /* Padding for spacing */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center; /* Vertically align items */
+    width: 100%; /* Full width of the page */
+    margin: 0; /* No margin */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+    /* Navbar Brand */
+    .custom-navbar .navbar-brand {
+        color: #f8fafc; /* White text */
+        font-size: 1.8rem; /* Larger font size for emphasis */
+        font-weight: bold; /* Bold text for brand */
+        text-decoration: none; /* Remove underline */
+    }
+
+    /* Navbar Links */
+    .custom-navbar .navbar-links {
+        display: flex; /* Align links in a row */
+        gap: 15px; /* Space between links */
+        margin-left: auto; /* Push links to the right */
+    }
+
+    .custom-navbar .nav-link {
+        color: #e5e7eb; /* Light gray for links */
+        font-size: 1rem; /* Standard font size */
+        text-decoration: none; /* Remove underline */
+        padding: 8px 15px; /* Button-like padding */
+        border-radius: 5px; /* Rounded corners for the links only */
+        transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+    }
+
+        /* Hover Effect for Links */
+        .custom-navbar .nav-link:hover {
+            background-color: #4b5563; /* Subtle blue-gray hover background */
+            color: #f8fafc; /* White text on hover */
+        }
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .custom-navbar {
+        flex-direction: column; /* Stack items vertically */
+        padding: 15px;
+    }
+
+        .custom-navbar .navbar-links {
+            flex-direction: column; /* Stack links vertically */
+            align-items: flex-start; /* Align links to the left */
+            gap: 10px; /* Adjust gap for vertical layout */
+        }
+
+        .custom-navbar .navbar-brand {
+            margin-bottom: 10px; /* Space below the brand */
+        }
+}
+
+
+/* General Styling for Welcome, Login, Register Pages */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+/* Welcome Page Container */
+.welcome-container {
+    background: linear-gradient(to bottom, #f4f6fc, #eaf0f6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/* Styling for the logo */
+.welcome-card .logo {
+    display: block;
+    margin: 0 auto 20px; /* Center the logo and add space below */
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Welcome Card Styling */
+.welcome-card {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 50px 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+    .button-group .btn-primary {
+        background-color: #007bff; /* Professional blue */
+        color: #ffffff; /* White text */
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Button font size */
+        border-radius: 5px; /* Slightly rounded corners */
+    }
+
+        .button-group .btn-primary:hover {
+            background-color: #0056b3; /* Slightly darker blue */
+        }
+
+    .button-group .btn-secondary {
+        background-color: #6c757d; /* Neutral gray */
+        color: #ffffff; /* White text */
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Button font size */
+        border-radius: 5px; /* Slightly rounded corners */
+    }
+
+        .button-group .btn-secondary:hover {
+            background-color: #5a6268; /* Darker neutral gray */
+        }
+/* Scoped to Authentication Pages */
+.auth-container {
+    max-width: 350px; /* Container width */
+    margin: 80px auto; /* Center container */
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Subtle gradient */
+    padding: 30px; /* Padding inside container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex; /* Flexbox ensures elements stack neatly */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: stretch; /* Stretch children to match container width */
+    justify-content: space-between; /* Ensure content fits properly */
+    height: auto; /* Automatically adjust height */
+    box-sizing: border-box; /* Include padding in the height */
+}
+
+    /* Authentication Page Heading */
+    .auth-container h2 {
+        text-align: center; /* Center-align heading */
+        margin-bottom: 25px; /* Space below heading */
+        color: #343a40; /* Dark gray for heading */
+    }
+
+    /* Form Group Styling */
+    .auth-container .form-group {
+        margin-bottom: 20px; /* Space between form fields */
+    }
+
+        /* Form Labels */
+        .auth-container .form-group label {
+            display: block; /* Block display for proper spacing */
+            font-weight: bold; /* Bold label */
+            margin-bottom: 5px; /* Space below label */
+            color: #495057; /* Dark gray label color */
+        }
+
+        /* Input Fields */
+        .auth-container .form-group input {
+            width: 100%; /* Full width for input */
+            padding: 10px; /* Padding inside input */
+            border: 1px solid #ced4da; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 1rem; /* Standard font size */
+        }
+
+            /* Focused Input Fields */
+            .auth-container .form-group input:focus {
+                border-color: #80bdff; /* Blue border on focus */
+                outline: none; /* Remove default outline */
+            }
+
+    /* Button Styling */
+    .auth-container button.btn {
+        display: block; /* Full width */
+        width: 100%; /* Match input field width */
+        padding: 10px; /* Adjust padding */
+        font-size: 1rem; /* Standard font size */
+        border-radius: 5px; /* Rounded corners */
+        border: none; /* Remove border */
+        transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+        margin-top: 10px; /* Add spacing above the button */
+        text-align: center; /* Center-align text */
+        box-sizing: border-box; /* Include padding and border in dimensions */
+    }
+
+
+    /* Primary Button */
+    .auth-container button.btn-primary {
+        background-color: #007bff; /* Blue background */
+        color: #ffffff; /* White text */
+    }
+
+        .auth-container button.btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    /* Error Message Styling */
+    .auth-container .text-danger {
+        color: #dc3545; /* Red color for error text */
+        font-size: 0.9rem; /* Smaller font size for error text */
+        margin-top: 10px; /* Space above error message */
+        text-align: center; /* Center-align error message */
+    }
+
+
+/* Add Employee Button Styling */
+.d-flex {
+    display: flex !important;
+}
+
+    .d-flex.justify-content-between {
+        justify-content: space-between !important;
+        align-items: center;
+    }
+
+.btn-primary {
+    float: right;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        text-decoration: none;
+    }
+
+/* Style for Add Employee/Attendance Button */
+.btn-create {
+    background-color: #405cff;
+    color: #ffffff;
+    padding: 8px 20px;
+    font-size: 1rem;
+    padding: 13px 18px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-create:hover {
+        background-color: #434190; /* Darker purple for hover */
+        color: #ffffff; /* Ensure white text on hover */
+        text-decoration: none; /* No underline */
+    }
+.btn i {
+    margin-right: 5px; /* Adds spacing between icon and text, if needed */
+    font-size: 0.9rem; /* Adjust icon size */
+}
+
+.btn-sm {
+    padding: 5px 10px; /* Adjust button size */
+}
+
+/* General Table Styling */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px; /* Smooth rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    /* Table Header */
+    .table th {
+        background-color: #4a90e2; /* Vibrant blue */
+        color: #ffffff; /* White text */
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 12px;
+    }
+
+    /* Table Body */
+    .table td {
+        padding: 12px;
+        text-align: left;
+        color: #555555; /* Neutral text color */
+        font-size: 0.95rem;
+    }
+
+/* Alternate Row Colors */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f7f9fc; /* Very light blue */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff; /* Pure white */
+}
+
+/* Hover Effect */
+.table-striped tbody tr:hover {
+    background-color: #e3f2fd; /* Light blue highlight */
+    transform: scale(1.01); /* Slight zoom effect */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+/* Align Buttons Side by Side */
+.button-group {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    gap: 10px; /* Add spacing between buttons */
+    justify-content: flex-start; /* Align buttons to the left */
+    align-items: center; /* Vertically align buttons */
+}
+
+    /* Optional: Button Padding and Size */
+    .button-group a {
+        display: inline-flex; /* Align text and icon */
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px; /* Adjust padding for button size */
+        font-size: 0.9rem; /* Font size */
+        border-radius: 5px; /* Rounded corners */
+        text-decoration: none; /* Remove underline */
+    }
+
+/* Edit Button */
+.btn-warning {
+    background-color: #ffc107; /* Yellow */
+    color: #ffffff;
+    padding: 10px 15px; /* Button size */
+    font-size: 1rem; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-warning:hover {
+        background-color: #e0a800; /* Darker yellow on hover */
+        transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+/* Delete Button */
+.btn-danger {
+    background-color: #dc3545; /* Red */
+    color: #ffffff;
+    padding: 10px 15px; /* Button size */
+    font-size: 1rem; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-danger:hover {
+        background-color: #b02a37; /* Darker red on hover */
+        transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+/* Back Button Styling */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: #007bff; /* Blue color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem;
+    margin-bottom: 20px; /* Space between the button and the form */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+    .back-button:hover {
+        color: #0056b3; /* Darker blue on hover */
+    }
+
+    .back-button i {
+        margin-right: 5px; /* Space between arrow and text */
+    }
+
+

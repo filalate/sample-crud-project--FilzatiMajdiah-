@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNoNavbar.cshtml";
+}
+@model EmployeeAttendanceSystem.Models.User
+
+<div class="auth-container">
+    <!-- Back button added here -->
+    <a href="@Url.Action("Welcome", "User")" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+
+    <h2>Login</h2>
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Username)
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+        @if (ViewBag.Message != null)
+        {
+            <p class="text-danger">@ViewBag.Message</p>
+        }
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    }
+</div>

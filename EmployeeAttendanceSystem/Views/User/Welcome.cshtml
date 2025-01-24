@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNoNavbar.cshtml"; 
+}
+
+<div class="welcome-container">
+    <div class="welcome-card">
+        <img src="~/images/employees.png" alt="System Logo" class="logo" />
+        <h1>Welcome to Employee Management System</h1>
+        <p>Your one-stop solution for managing employee attendance.</p>
+        <div class="button-group">
+            <a href="@Url.Action("Login", "User")" class="btn btn-primary">Login</a>
+            <a href="@Url.Action("Register", "User")" class="btn btn-secondary">Register</a>
+        </div>
+    </div>
+</div>
